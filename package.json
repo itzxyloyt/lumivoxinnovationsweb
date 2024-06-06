@@ -1,8 +1,22 @@
 {
+  "name": "lumivoxinnovationsweb",
+  "version": "1.0",
+  "description": "Lumivox Innovation's website",
+  "main": "app/page.tsx",
+  "funding": "http://lumivoxinnovations.xyz/donate",
+}, {
+  {
+  "author": "Brett Davenport"
+}, {
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
-  }
+  }, {
+  "homepage": "https://github.com/itzxyloyt/lumivoxinnovationsweb#readme",
+  "url": "https://github.com/itzxyloyt/lumivoxinnovationsweb/issues",
+  "email": "contact@lumivoxinnovations.xyz",
+  "license": "SEE LICENSE IN LICENSE.md"
+}
 }
