@@ -1,6 +1,8 @@
 // @ts-check
  
-const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
+const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
+
+const experimental.instrumentationHook = true;
  
 module.exports = (phase, { defaultConfig }) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
