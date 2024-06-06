@@ -4,7 +4,7 @@ import { cookies } from 'next/headers'
 import { signIn } from '@/auth'
  
 export async function handleLogin(sessionData) {
-  const encryptedSessionData = encrypt(sessionData) // Encrypt your session data
+  const encryptedSessionData = encrypt(sessionData)
   cookies().set('session', encryptedSessionData, {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
