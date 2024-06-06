@@ -1,6 +1,17 @@
 'use server'
- 
+
+import { cookies } from 'next/headers'
 import { signIn } from '@/auth'
+ 
+export async function handleLogin(sessionData) {
+  const encryptedSessionData = encrypt(sessionData) // Encrypt your session data
+  cookies().set('session', encryptedSessionData, {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    maxAge: 60 * 60 * 24 * 7,
+    path: '/',
+  })
+}
  
 export async function authenticate(_currentState: unknown, formData: FormData) {
   try {
